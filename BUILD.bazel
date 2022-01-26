@@ -1,0 +1,8 @@
+load("@npm//@bazel/typescript:index.bzl", "ts_project")
+ts_project(
+    name = "project",
+    tsconfig = "tsconfig.json",
+    deps = ["@npm//fp-ts"],
+    srcs = glob(["*.ts"]),
+    declaration = True,
+)
